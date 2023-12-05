@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   
+  
+    
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        
+
+        <audio src="sounds/HomeScreenSound.mp3" type="audio/mp3" autoplay loop id="mainAudio"></audio>
+        <audio src="sounds/GameAmbience.mp3" type="audio/mp3" loop id="gameAudio"></audio>
+        <audio src="sounds/Boom.mp3" id="enterGameButtonAudio" preload="auto"></audio>
+        <audio src="sounds/ping.mp3" id="genderSelectButtonAudio" preload="auto"></audio>
+
+
+</head>
+
+<body>
+
+        <div class="container">
+        <div class="stars"></div>
+        <div class="stars1"></div>
+        <div class="stars2"></div>
+   
+        <div class="iconGrow">
+        <button class="" id="audioButton" onclick="muteSound()">
+            <img id="btnPicAudio" style="width:45px;height:45px;" src="images/sound.png"/>
+    
+        <button class="hidden" id="audioButtonMute" onclick="unmuteSound()">
+            <img id="btnPicAudioMute" style="width:45px;height:45px;" src="images/mute.png"/>
+        
+        <button class="hidden" id="gameAudioButton" onclick="muteGameSound()">
+            <img id="btnPicAudio" style="width:45px;height:45px;" src="images/sound.png"/>
+            
+        <button class="hidden" id="gameAudioButtonMute" onclick="unmuteGameSound()">
+            <img id="btnPicAudioMute" style="width:45px;height:45px;" src="images/mute.png"/>
+        </button>
+        </div>
+
+    <!-- Front page section -->
+    <section id="frontPage">
+      
+        <img src="images/GameLogo1.png"  id="title">      
+
+        <button class="btn" id="launchButton" onclick="loginPage(), playPing();">
+          <strong>LAUNCH</strong>
+
+          <div id="container-stars">
+
+            <div id="stars"></div>
+          </div>
+        
+          <div id="glow">
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+        </button>
+        
+    </section>
+
+
+    <!-- Login Page -->
+    <section class="hidden" id="loginPage">
+
+          <div class="EVERLOSTTitle" id="EVERLOSTTitle3">
+            <div class="iconGrow">
+              <button class="mainHomeButton" onclick="homePage()">
+              <img src="images/GameLogo2.png" id="EVERLOST">
+            </button>
+            </div>
+          </div>
+       
+           
+          <div class="inputBox">
+            <input type="text" id="loginEmailField" placeholder="Email" />
+            <input type="password" id="loginPasswordField" placeholder="Password" />
+
+            <button class="btn" id="loginButton" onclick="login(), playPing();">
+                <strong>Login</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
+
+            <button class="btn" id="registerButton" onclick="registerPage(), playPing();">
+                <strong>Register</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
+            
+              <div id="glow">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+          </button>
+
+          
+  </section>
+
+
+  <!-- Register Page -->
+  <section class="hidden" id="registerPage">
+
+        <div class="EVERLOSTTitle" id="EVERLOSTTitle3">
+          <div class="iconGrow">
+            <button class="mainHomeButton" onclick="homePage()">
+            <img src="images/GameLogo2.png" id="EVERLOST">
+          </button>
+          </div>
+        </div>
+
+
+        <div class="inputBox">
+          <input type="text" id="emailField" placeholder="Email" />
+          <input type="password" id="passwordField" placeholder="Password" />
+          <input type="password" id="reenterpasswordField" placeholder="Re-Enter Password" />
+            <button class="btn" id="registerButton" onclick="registerDetails(), playPing();">
+                <strong>Register</strong>
+                
+                <div id="container-stars">
+                
+                  <div id="stars"></div>
+                </div>
+              
+                <div id="glow">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+            </button>
+        </div>
+
+        
+    </section>
+
+
+    <!-- Main Menu Page -->
+  <section class="hidden" id="mainMenuPage">
+
+          <div class="EVERLOSTTitle" id="EVERLOSTTitle2">
+            <div class="iconGrow">
+              <img src="images/GameLogo2.png" id="EVERLOST">
+            </div>
+          </div>
+          
+          <div id="planet">
+            <img src="images/planet.png" id="planetImage">
+          
+            <div class="buttons-container">
+
+              <button id="newGameButton" class="btn" type="button" onclick="genderPage(), playPing();">
+                <strong>New Game</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+
+              <button id="creditsButton" class="btn" type="button" onclick="credits(), playPing();">
+                <strong>Artwork</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+
+              <button id="logoutButton" class="btn" type="button" onclick="homePage(), playPing();">
+                <strong>Logout</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+              
+                <div id="glow">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </button>
+
+  </section>
+
+
+  <!-- Main Menu Page with resume button -->
+  <section class="hidden" id="resumeMainMenuPage">
+
+    <div class="EVERLOSTTitle" id="EVERLOSTTitle2">
+      <div class="iconGrow">
+        <img src="images/GameLogo2.png" id="EVERLOST">
+      </div>
+    </div>
+    
+    <div id="planet">
+      <img src="images/planet.png" id="planetImage">
+    
+      <div class="buttons-container">
+
+        <button id="newGameButton" class="btn" type="button" onclick="gamePage(), playPing();">
+          <strong>Resume</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
+
+        <button id="creditsButton" class="btn" type="button" onclick="credits(), playPing();">
+          <strong>Artwork</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
+
+        <button id="logoutButton" class="btn" type="button" onclick="homePage(), playPing();">
+          <strong>Logout</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
+        
+          <div id="glow">
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+        </button>
+
+</section>
+
+
+
+    <!-- Gender Page Section -->
+    <section class="hidden" id="genderPage">
+       
+        <div class="EVERLOSTTitle" id="">
+          <div class="iconGrow">
+            <button class="mainHomeButton" onclick="mainMenuPage()">
+            <img src="images/GameLogo2.png" id="EVERLOST">
+          </button>
+          </div>
+        </div>
+
+        <div class="cardGroup">
+            <div class="card1">
+                <button class="" id="maleButton" onclick="newGame(), bodytype1()">
+                    <img src="images/BodyTypeA.png" class="gameTitle" /></button>
+              <div class="wrapper">
+                <img src="images/maleBackground.jpg" class="cover-image" />
+              </div>
+              <img src="images/malePopout.png" class="character" id="malePopout" />
+            </div>
+            
+    
+            <div class="card2">
+                <button class="" id="femaleButton" onclick="newGame(), bodytype2()">
+                    <img src="images/BodyTypeB.png" class="gameTitle" /></button>
+                <div class="wrapper">
+                  <img src="images/femaleBackground.jpg" class="cover-image" />
+                </div>
+                <img src="images/femalePopout.png" class="character" id="femalePopout" />
+              </div>
+             
+    </section>
+
+
+
+    <!-- Name Selection Page -->
+    <section class="hidden" id="charPage">
+
+        <div class="EVERLOSTTitle" id="EVERLOSTTitle2">
+          <div class="iconGrow">
+            <button class="mainHomeButton" onclick="mainMenuPage()">
+            <img src="images/GameLogo2.png" id="EVERLOST">
+          </button>
+          </div>
+        </div>
+         
+        <div class="iconGrow">
+        <img src="images/malePopout.png"  id="bodytypeImage"/>
+        </div>
+        
+        <div class="inputBox">
+            <input type="text" id="inputField" placeholder="Character Name" />
+
+            <button class="btn" id="enterGameButton" onclick="getInputValue()">
+                <strong>Enter Game</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
+            
+              <div id="glow">
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </button>
+
+    </section>
+
+
+    <!-- Game Page -->
+    <section class="hidden" id="gamePage">
+
+        
+        <div class="EVERLOSTTitle" id="EVERLOSTTitle2">
+          <div class="iconGrow">
+            <button class="mainHomeButton" onclick="resumeMainMenuPage()">
+            <img src="images/GameLogo2.png" id="EVERLOST">
+          </button>
+          </div>
+        </div>
+
+        <img src="images/player.png" width="40px" id="player">
+
+        <p id="playersName"></p>
+
+        <div class="card">
+          <div class="cardContent" id="dynamicBackground">
+        <section id="outputSection">
+        <div><p id="output"></p></div>
+        <div id="outputError"></div>
+        </section>
+
+        <section id="inputSection">
+        <input type="text" id="playerInput" placeholder="Type your choice and press Enter">
+        </section>
+                              
+    </section>
+
+
+    <!-- Credits Page -->
+    <section class="hidden" id="creditsPage">
+
+        
+      <div class="EVERLOSTTitle" id="">
+        <div class="iconGrow">
+          <button class="mainHomeButton" onclick="mainMenuPage()">
+          <img src="images/GameLogo2.png" id="EVERLOST">
+        </button>
+        </div>
+      </div>
+
+      CREDITS
+                            
+  </section>
+
+    <footer>
+        <p>Created by Paul Wild</p>
+    </footer>
+     
+    <script src="code.js"></script>
+
+
+</body>
+</html>
