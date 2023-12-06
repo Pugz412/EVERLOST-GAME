@@ -1,26 +1,3 @@
-class User {
-  constructor(email, password) {
-    this.email = email;
-    this.password = password;
-    this.saveToLocalStorage();
-  }
-
-  saveToLocalStorage() {
-    localStorage.setItem("emailField", this.email);
-    localStorage.setItem("passwordField", this.password);
-  }
-
-  static getUserFromLocalStorage() {
-    const storedEmail = localStorage.getItem("emailField");
-    const storedPassword = localStorage.getItem("passwordField");
-    return new User(storedEmail, storedPassword);
-  }
-
-  login(enteredEmail, enteredPassword) {
-    return enteredEmail === this.email && enteredPassword === this.password;
-  }
-}
-
 let playerName = "";
 let playerInput = "";
 let email = "";
@@ -30,6 +7,8 @@ let storedPassword = localStorage.getItem("password");
 let enteredEmail = "";
 let enteredPassword = "";
 let backgroundImage = "";
+
+//-------------------------------------------------------------- DOM FUCNTIONS --------------------------------------------------------------
 
 //  Function to move to home screen
 function homePage() {
@@ -154,6 +133,31 @@ function gamePage() {
   unmuteGameSound();
 }
 
+//-------------------------------------------------------------- LOGIN FUCNTIONS --------------------------------------------------------------
+
+class User {
+  constructor(email, password) {
+    this.email = email;
+    this.password = password;
+    this.saveToLocalStorage();
+  }
+
+  saveToLocalStorage() {
+    localStorage.setItem("emailField", this.email);
+    localStorage.setItem("passwordField", this.password);
+  }
+
+  static getUserFromLocalStorage() {
+    const storedEmail = localStorage.getItem("emailField");
+    const storedPassword = localStorage.getItem("passwordField");
+    return new User(storedEmail, storedPassword);
+  }
+
+  login(enteredEmail, enteredPassword) {
+    return enteredEmail === this.email && enteredPassword === this.password;
+  }
+}
+
 //  Function to authenticate login
 function login() {
   const enteredEmail = document.getElementById("loginEmailField").value;
@@ -167,7 +171,7 @@ function login() {
   }
 }
 
-//  Function to save register details - to be completed
+//  Function to save register details
 function registerDetails() {
   const email = document.getElementById("emailField").value;
   const password = document.getElementById("passwordField").value;
@@ -180,6 +184,8 @@ function registerDetails() {
     mainMenuPage();
   }
 }
+
+//-------------------------------------------------------------- SOUND/IMAGE FUCNTIONS --------------------------------------------------------------
 
 // Funcion to play the boom sound when clicking Enter Game
 function playBoom() {
@@ -246,6 +252,8 @@ function bodytype2() {
 function bodytype1() {
   document.getElementById("bodytypeImage").src = "Images/malePopout.png";
 }
+
+//-------------------------------------------------------------- GAME FUCNTIONS --------------------------------------------------------------
 
 //  Function to store the char name and starts game
 function getInputValue() {
