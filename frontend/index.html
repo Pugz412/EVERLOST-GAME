@@ -325,26 +325,34 @@
       <div class="EVERLOSTTitle" id="">
         <div class="iconGrow">
           <button class="mainHomeButton" onclick="mainMenuPage()">
-          <img src="images/GameLogo2.png" id="EVERLOST">
-        </button>
+            <img src="images/GameLogo2.png" id="EVERLOST">
+          </button>
+        </div>
+      
+        <div class="imageCard">
+          <div class="imageCardContent" id="imageBackground">
+            <div id="imageContainer">
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <div class="cardContent" id="dynamicBackground">
+      <div class="buttons-container1">
+        <button id="previousButton" class="btn" type="button" onclick="previousImage(), playPing();">
+          <strong>PREV</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
+        </button>
+    
+        <button id="nextButton" class="btn" type="button" onclick="nextImage(), playPing();">
+          <strong>NEXT</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
+        </button>
+      </div>
 
-          <button id="previouseButton" class="btn" type="button" onclick="playPing();">
-            <strong>Previous</strong>
-            <div id="container-stars">
-              <div id="stars"></div>
-            </div>
-  
-          <button id="nextsButton" class="btn" type="button" onclick="playPing();">
-            <strong>Next</strong>
-            <div id="container-stars">
-              <div id="stars"></div>
-            </div>
-                            
+                                        
   </section>
 
     <footer>

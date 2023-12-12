@@ -299,7 +299,7 @@ function displayScene() {
     backgroundImage = `url('${currentScene.image}')`;
     cardContent.style.backgroundImage = backgroundImage;
   } else {
-    // Handle the case where currentScene is null or invalid
+    // Takes player back to main menu if they select "no"
     mainMenuPage();
   }
 }
@@ -359,3 +359,38 @@ cardContent.classList.add("dynamicBackground");
 
 // Set the background image using inline style
 cardContent.style.backgroundImage = `url('${backgroundImage}')`;
+
+//-------------------------------------------------------------- IMAGE LIBRARY --------------------------------------------------------------
+
+let currentImageIndex = 0;
+let imageData = {};
+
+function showImage(index) {
+  const imageContainer = document.getElementById("imageContainer");
+  if (index >= 0 && index < Object.keys(imageData).length) {
+    const imageKey = Object.keys(imageData)[index];
+    const imageUrl = imageData[imageKey].image;
+    imageContainer.innerHTML = `<img src="${imageUrl}" alt="${imageKey}">`;
+    currentImageIndex = index;
+  }
+}
+
+function nextImage() {
+  currentImageIndex = (currentImageIndex + 1) % Object.keys(imageData).length;
+  showImage(currentImageIndex);
+}
+
+function previousImage() {
+  currentImageIndex =
+    (currentImageIndex - 1 + Object.keys(imageData).length) %
+    Object.keys(imageData).length;
+  showImage(currentImageIndex);
+}
+
+fetch("gameTree.json")
+  .then((response) => response.json())
+  .then((data) => {
+    imageData = data;
+    showImage(currentImageIndex);
+  })
+  .catch((error) => console.error("Error fetching data:", error));
