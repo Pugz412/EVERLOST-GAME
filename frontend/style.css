@@ -221,6 +221,7 @@ input[type="password"] {
   width: 50%;
   padding: 10px;
   border-radius: 5px;
+  margin-bottom: 500px;
 }
 
 #reenterpasswordField {

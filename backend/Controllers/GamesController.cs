@@ -22,7 +22,7 @@ namespace GameStoreApi.Controllers
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "firstScene",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["firstScene"] = new Dictionary<string, object>
@@ -68,21 +68,21 @@ namespace GameStoreApi.Controllers
                 ["fallDeath"] = new Dictionary<string, object>
                 {
                     ["text"] = "You desperately claw at the rocks, but your grip fails, and you plummet into the yawning abyss below, a piercing scream tearing through the cavern's eerie silence. The echoes of your desperate cries fade into the darkness. Your journey ends abruptly. Game Over. <br><br>Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "images/fallDeath.jpg",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["ledgeDeath"] = new Dictionary<string, object>
                 {
                     ["text"] = "The ledge crumbles beneath your weight, and with a chilling scream, you plummet into the gaping abyss below. The sound of your panicked cries echoes through the cavern, but the darkness swallows them whole. Your journey meets a sudden, tragic end. Game Over. <br><br>Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["caveExitScene1"] = new Dictionary<string, object>
@@ -108,21 +108,21 @@ namespace GameStoreApi.Controllers
                 ["fireDeathScene1"] = new Dictionary<string, object>
                 {
                     ["text"] = "As the flames from your fire flicker and dance, casting a faint warmth amidst the freezing winds, an ominous presence lurks in the shadows. The crackling firelight becomes a beacon, drawing forth a savage creature from the darkness. In a sudden, horrifying onslaught, the creature pounces, its savage assault tearing through you mercilessly. Game Over. <br><br>Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["fireDeathScene2"] = new Dictionary<string, object>
                 {
                     ["text"] = "As you strive to kindle a fire to dry off from the chilling waters, the relentless howling winds thwart your attempts. Despite your efforts, the unforgiving elements prevent the fire from taking hold, and you succumb to the bitter cold. Game Over. <br><br>Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["frozenForrestEntrance"] = new Dictionary<string, object>
@@ -178,21 +178,21 @@ namespace GameStoreApi.Controllers
                 ["cliffDeathScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Pressing forward with unwavering determination through the blinding blizzard, the ferocity of the storm obscures your path entirely. Disoriented and engulfed by the harsh conditions, your footing falters, and you inadvertently tumble over the edge of a concealed cliff, plummeting into the abyss below. The chilling realization sets in as your journey meets a sudden, tragic end. Game Over. <br><br>Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["crevasseScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Persisting onward through the relentless blizzard without your torch, the surrounding darkness obscures the treacherous crevasse lying in your path. Unable to discern the hidden danger ahead, you unwittingly stumble into the gaping chasm, plummeting into its icy depths. Your journey meets a sudden, tragic end. Game Over. Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["lakeScene"] = new Dictionary<string, object>
@@ -248,11 +248,11 @@ namespace GameStoreApi.Controllers
                 ["creatureDeathScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "While scouting for an alternate path, your exploration leads you unwittingly into the lair of a fearsome creature. Before you can react, the creature pounces with ferocity, and you are swiftly overtaken, meeting a grim fate. Game Over. <br><br>Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["downStreamScene"] = new Dictionary<string, object>
@@ -288,41 +288,41 @@ namespace GameStoreApi.Controllers
                 ["raftDeathScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Persisting in your attempt to reach the shore, you struggle against the unyielding current. Regrettably, your efforts prove futile as the powerful stream propels you relentlessly towards a looming waterfall downstream. Despite your last-minute realization, it's too late to avert the tragic outcome. You succumb to the overwhelming force of the crushing fall. Game Over. <br><br>Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["riverDeathScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "As you endeavor to navigate across the river, the forceful current proves insurmountable. Despite your efforts, you're unable to withstand its strength, succumbing to the relentless waters. Tragically, you drown in the overpowering current. Game Over. <br><br>Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 }
                 ["outOfTimeScene1"] = new Dictionary<string, object>
                 {
                     ["text"] = "Having stripped down and dried your clothes by a crackling fire, you set out toward the ship with renewed determination. However, upon arrival, a distressing sight meets your eyes, the creature ravaging on the remains of the doctor. Your delay has led to this grim outcome. Time has proven to be your adversary. Game Over. Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["outOfTimeScene2"] = new Dictionary<string, object>
                 {
                     ["text"] = "Navigating towards the rocks, you descend the hillside safely, skillfully maneuvering down the steep terrain. However, upon reaching the ship at the bottom, a haunting scene unfolds before you, the creature engorging itself on the doctor's remains. Regrettably, your delay has led to this grim outcome. Time has proven to be your adversary once again. Game Over. Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "",
+                    ["image"] = "images/death.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
-                        ["no"] = null
+                        ["no"] = "endGame"
                     }
                 },
                 ["winScene1"] = new Dictionary<string, object>

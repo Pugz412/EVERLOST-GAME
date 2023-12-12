@@ -25,7 +25,7 @@ function loginPage() {
   document.getElementById("genderPage").classList.add("hidden");
   document.getElementById("charPage").classList.add("hidden");
   document.getElementById("gamePage").classList.add("hidden");
-  document.getElementById("creditsPage").classList.add("hidden");
+  document.getElementById("imagesPage").classList.add("hidden");
   document.getElementById("emailField").value = "";
   document.getElementById("passwordField").value = "";
 }
@@ -40,7 +40,7 @@ function registerPage() {
   document.getElementById("genderPage").classList.add("hidden");
   document.getElementById("charPage").classList.add("hidden");
   document.getElementById("gamePage").classList.add("hidden");
-  document.getElementById("creditsPage").classList.add("hidden");
+  document.getElementById("imagesPage").classList.add("hidden");
   document.getElementById("emailField").value = "";
   document.getElementById("passwordField").value = "";
 }
@@ -55,7 +55,7 @@ function mainMenuPage() {
   document.getElementById("genderPage").classList.add("hidden");
   document.getElementById("charPage").classList.add("hidden");
   document.getElementById("gamePage").classList.add("hidden");
-  document.getElementById("creditsPage").classList.add("hidden");
+  document.getElementById("imagesPage").classList.add("hidden");
 }
 
 //  Function to move to main menu screen once game started
@@ -68,7 +68,7 @@ function resumeMainMenuPage() {
   document.getElementById("genderPage").classList.add("hidden");
   document.getElementById("charPage").classList.add("hidden");
   document.getElementById("gamePage").classList.add("hidden");
-  document.getElementById("creditsPage").classList.add("hidden");
+  document.getElementById("imagesPage").classList.add("hidden");
   muteGameSound();
   unmuteSound();
 }
@@ -83,7 +83,7 @@ function genderPage() {
   document.getElementById("genderPage").classList.remove("hidden");
   document.getElementById("charPage").classList.add("hidden");
   document.getElementById("gamePage").classList.add("hidden");
-  document.getElementById("creditsPage").classList.add("hidden");
+  document.getElementById("imagesPage").classList.add("hidden");
 }
 
 //  Function to move to name screen
@@ -96,7 +96,7 @@ function newGame() {
   document.getElementById("genderPage").classList.add("hidden");
   document.getElementById("charPage").classList.remove("hidden");
   document.getElementById("gamePage").classList.add("hidden");
-  document.getElementById("creditsPage").classList.add("hidden");
+  document.getElementById("imagesPage").classList.add("hidden");
   playPing();
 }
 
@@ -110,7 +110,7 @@ function credits() {
   document.getElementById("genderPage").classList.add("hidden");
   document.getElementById("charPage").classList.add("hidden");
   document.getElementById("gamePage").classList.add("hidden");
-  document.getElementById("creditsPage").classList.remove("hidden");
+  document.getElementById("imagesPage").classList.remove("hidden");
   playPing();
 }
 
@@ -124,7 +124,7 @@ function gamePage() {
   document.getElementById("resumeMainMenuPage").classList.add("hidden");
   document.getElementById("charPage").classList.add("hidden");
   document.getElementById("gamePage").classList.remove("hidden");
-  document.getElementById("creditsPage").classList.add("hidden");
+  document.getElementById("imagesPage").classList.add("hidden");
   document.getElementById("audioButton").classList.add("hidden");
   document.getElementById("audioButtonMute").classList.add("hidden");
   document.getElementById("gameAudioButtonMute").classList.add("hidden");
@@ -245,12 +245,12 @@ function unmuteGameSound() {
 
 // Function to change bodytype selection image
 function bodytype2() {
-  document.getElementById("bodytypeImage").src = "Images/femalePopout.png";
+  document.getElementById("bodytypeImage").src = "images/femalePopout.png";
 }
 
 // Function to change bodytype selection image
 function bodytype1() {
-  document.getElementById("bodytypeImage").src = "Images/malePopout.png";
+  document.getElementById("bodytypeImage").src = "images/malePopout.png";
 }
 
 //-------------------------------------------------------------- GAME FUCNTIONS --------------------------------------------------------------
@@ -271,7 +271,7 @@ function getInputValue() {
     document.getElementById("resumeMainMenuPage").classList.add("hidden");
     document.getElementById("charPage").classList.add("hidden");
     document.getElementById("gamePage").classList.remove("hidden");
-    document.getElementById("creditsPage").classList.add("hidden");
+    document.getElementById("imagesPage").classList.add("hidden");
     document.getElementById("audioButton").classList.add("hidden");
     document.getElementById("audioButtonMute").classList.add("hidden");
     document.getElementById("gameAudioButtonMute").classList.add("hidden");
@@ -300,7 +300,7 @@ function displayScene() {
     cardContent.style.backgroundImage = backgroundImage;
   } else {
     // Handle the case where currentScene is null or invalid
-    console.error("Invalid currentScene.");
+    mainMenuPage();
   }
 }
 
