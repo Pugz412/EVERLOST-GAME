@@ -9,9 +9,10 @@ namespace UserApi.Controllers
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
-        
-        // localhost:xxx/api/games
-        [HttpGet]
+
+             
+        // localhost:xxx/api/users
+        [HttpGet("admin")]
         public IActionResult GetUsers()
         {
             var db = new UserDB();

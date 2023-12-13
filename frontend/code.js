@@ -139,12 +139,22 @@ class User {
   constructor(email, password) {
     this.email = email;
     this.password = password;
-    this.saveToLocalStorage();
   }
 
-  saveToLocalStorage() {
-    localStorage.setItem("emailField", this.email);
-    localStorage.setItem("passwordField", this.password);
+  static async getUserFromAPI() {
+    try {
+      const response = await fetch("http://localhost:5090/api/users/admin");
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const userData = await response.json();
+
+      console.log(userData); // Displaying extracted data (you can modify this as needed)
+      return userData;
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+      throw error;
+    }
   }
 
   static getUserFromLocalStorage() {
@@ -153,25 +163,16 @@ class User {
     return new User(storedEmail, storedPassword);
   }
 
+  saveToLocalStorage() {
+    localStorage.setItem("emailField", this.email);
+    localStorage.setItem("passwordField", this.password);
+  }
+
   login(enteredEmail, enteredPassword) {
     return enteredEmail === this.email && enteredPassword === this.password;
   }
 }
 
-//  Function to authenticate login
-function login() {
-  const enteredEmail = document.getElementById("loginEmailField").value;
-  const enteredPassword = document.getElementById("loginPasswordField").value;
-
-  const user = User.getUserFromLocalStorage();
-  if (user.login(enteredEmail, enteredPassword)) {
-    mainMenuPage();
-  } else {
-    alert("Wrong login details. Please try again.");
-  }
-}
-
-//  Function to save register details
 function registerDetails() {
   const email = document.getElementById("emailField").value;
   const password = document.getElementById("passwordField").value;
@@ -180,8 +181,34 @@ function registerDetails() {
     alert("Enter Details!");
   } else {
     const user = new User(email, password);
+    user.saveToLocalStorage();
     console.log(localStorage);
     mainMenuPage();
+  }
+}
+
+async function login() {
+  const enteredEmail = document.getElementById("loginEmailField").value;
+  const enteredPassword = document.getElementById("loginPasswordField").value;
+
+  try {
+    const userData = await User.getUserFromAPI();
+    const user = User.getUserFromLocalStorage();
+    const foundUser = userData.find(
+      (data) => data.email === enteredEmail && data.password === enteredPassword
+    );
+
+    if (foundUser) {
+      user.email = enteredEmail;
+      user.password = enteredPassword;
+      user.saveToLocalStorage();
+      mainMenuPage();
+    } else {
+      alert("Wrong login details. Please try again.");
+    }
+  } catch (error) {
+    alert("There was a problem logging in. Please try again later.");
+    console.error(error);
   }
 }
 
@@ -394,3 +421,5 @@ fetch("gameTree.json")
     showImage(currentImageIndex);
   })
   .catch((error) => console.error("Error fetching data:", error));
+
+//--------------------------------------------------------------------------
