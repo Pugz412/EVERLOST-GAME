@@ -1,9 +1,5 @@
 let playerName = "";
 let playerInput = "";
-let email = "";
-let password = "";
-let storedEmail = localStorage.getItem("email");
-let storedPassword = localStorage.getItem("password");
 let enteredEmail = "";
 let enteredPassword = "";
 let backgroundImage = "";
@@ -135,6 +131,11 @@ function gamePage() {
 
 //-------------------------------------------------------------- LOGIN FUCNTIONS --------------------------------------------------------------
 
+let email = localStorage.getItem("emailField") || "";
+let password = localStorage.getItem("passwordField") || "";
+let storedEmail = localStorage.getItem("email");
+let storedPassword = localStorage.getItem("password");
+
 class User {
   constructor(email, password) {
     this.email = email;
@@ -198,9 +199,7 @@ async function login() {
       (data) => data.email === enteredEmail && data.password === enteredPassword
     );
 
-    if (foundUser) {
-      user.email = enteredEmail;
-      user.password = enteredPassword;
+    if (foundUser || user.login(enteredEmail, enteredPassword)) {
       user.saveToLocalStorage();
       mainMenuPage();
     } else {
