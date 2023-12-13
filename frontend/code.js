@@ -136,12 +136,14 @@ let password = localStorage.getItem("passwordField") || "";
 let storedEmail = localStorage.getItem("email");
 let storedPassword = localStorage.getItem("password");
 
+// Setting a User class
 class User {
   constructor(email, password) {
     this.email = email;
     this.password = password;
   }
 
+  // Pulling the user data from the DB
   static async getUserFromAPI() {
     try {
       const response = await fetch("http://localhost:5090/api/users/admin");
@@ -150,7 +152,7 @@ class User {
       }
       const userData = await response.json();
 
-      console.log(userData); // Displaying extracted data (you can modify this as needed)
+      console.log(userData);
       return userData;
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
@@ -158,6 +160,7 @@ class User {
     }
   }
 
+  // Local storage functions
   static getUserFromLocalStorage() {
     const storedEmail = localStorage.getItem("emailField");
     const storedPassword = localStorage.getItem("passwordField");
@@ -174,6 +177,7 @@ class User {
   }
 }
 
+// Register function
 function registerDetails() {
   const email = document.getElementById("emailField").value;
   const password = document.getElementById("passwordField").value;
@@ -188,6 +192,7 @@ function registerDetails() {
   }
 }
 
+// Function to authenticate the login details
 async function login() {
   const enteredEmail = document.getElementById("loginEmailField").value;
   const enteredPassword = document.getElementById("loginPasswordField").value;
