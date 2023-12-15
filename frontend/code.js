@@ -293,7 +293,7 @@ function getInputValue() {
   if (playerName == "") {
     alert("Choose a name!");
   } else {
-    displayScene();
+    startGame();
     document.getElementById("frontPage").classList.add("hidden");
     document.getElementById("loginPage").classList.add("hidden");
     document.getElementById("registerPage").classList.add("hidden");
@@ -332,6 +332,8 @@ function displayScene() {
   } else {
     // Takes player back to main menu if they select "no"
     mainMenuPage();
+    muteGameSound();
+    unmuteSound();
   }
 }
 
@@ -349,7 +351,7 @@ input.addEventListener("keydown", async function (event) {
         displayScene();
 
         if (!currentScene) {
-          input.disabled = true;
+          input.disabled = false;
         }
       } catch (error) {
         console.error("Error fetching or updating game tree:", error);
@@ -425,5 +427,3 @@ fetch("gameTree.json")
     showImage(currentImageIndex);
   })
   .catch((error) => console.error("Error fetching data:", error));
-
-//--------------------------------------------------------------------------

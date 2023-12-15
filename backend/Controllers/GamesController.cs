@@ -128,7 +128,7 @@ namespace GameStoreApi.Controllers
                 ["frozenForrestEntrance"] = new Dictionary<string, object>
                 {
                     ["text"] = "Pressing onward, your footing betrays you, and you stumble uncontrollably down a steep, treacherous slope. As you reach the bottom, shaken but resilient, you find yourself standing at the entrance of a frozen forest. Two pathways lie before you: one extends straight ahead, while the other veers to the left. Which path shall you embark upon in this enigmatic woodland? <br><br>STRAIGHT / LEFT",
-                    ["image"] = "",
+                    ["image"] = "images/frozenForrestEntrance.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["straight"] = "frozenForrestScene",
@@ -138,27 +138,27 @@ namespace GameStoreApi.Controllers
                 ["frozenForrestScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "As you arrive at a serene clearing adorned by a vast frozen lake, a crucial decision looms ahead. Will you opt for the swifter yet riskier journey across the icy expanse? Or do you choose the cautious path, navigating around the perimeter to ensure a safer passage? <br><br>CROSS / GO AROUND",
-                    ["image"] = "",
+                    ["image"] = "images/frozenForrestScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["cross"] = "lakeScene",
-                        ["go around"] = "delayScene" // note: 'go_around' used due to space in the option key
+                        ["go around"] = "delayScene"
                     }
                 },
                 ["torchScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Venturing leftward into the heart of the forest, dusk begins to cast its shadowy veil. Realizing your torch has been lost during the earlier fall, a dilemma unfolds. Do you choose to retrace your steps, risking further delay to retrieve the torch? Or do you bravely press forward into the deepening darkness, relying solely on your instincts to guide your path? <br><br>GO BACK / PROCEED",
-                    ["image"] = "",
+                    ["image"] = "images/torchScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
-                        ["go back"] = "searchScene", // note: 'go_back' used due to space in the option key
+                        ["go back"] = "searchScene",
                         ["proceed"] = "crevasseScene"
                     }
                 },
                 ["searchScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Retracing your steps, you stumble back and rediscover your torch, its light offering a glimmer of hope amidst the worsening storm. The tempest has intensified during your absence. Will you persevere, braving the escalating fury of the storm? Or do you opt to seek refuge, hastily constructing a shelter to shield yourself from the relentless onslaught of the alien storm? <br><br>PROCEED / SHELTER",
-                    ["image"] = "",
+                    ["image"] = "images/searchScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["proceed"] = "cliffDeathScene",
@@ -168,7 +168,7 @@ namespace GameStoreApi.Controllers
                 ["delayScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Opting for caution, you navigate around the perimeter of the frozen lake, only to discover the storm's sudden escalation during your circumnavigation. Now confronted with deteriorating conditions, do you choose to forge ahead, confronting the intensifying tempest head-on despite the risks? Or do you consider hastily constructing a shelter, mindful that this decision may delay your critical mission, yet providing a chance to seek refuge from the relentless fury of the storm? <br><br>PROCEED / SHELTER",
-                    ["image"] = "",
+                    ["image"] = "images/delayScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["proceed"] = "cliffDeathScene",
@@ -198,7 +198,7 @@ namespace GameStoreApi.Controllers
                 ["lakeScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Having chosen the risky path of crossing the ice-covered lake, your decision proves perilous as the brittle surface gives way beneath you. Emerging soaked and shivering from the freezing waters, your immediate concern is to dry off and regain warmth. Will you hastily construct a fire, seeking immediate heat against the freezing chill? Or do you consider building a shelter, providing a more sustained refuge against the harsh elements? <br><br>FIRE / SHELTER",
-                    ["image"] = "",
+                    ["image"] = "images/lakeScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["fire"] = "fireDeathScene2",
@@ -208,7 +208,7 @@ namespace GameStoreApi.Controllers
                 ["shelterScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Swiftly fashioning a sturdy shelter that shields you from the storm's wrath, you build a warming fire, you awaken to the serenity following the tempest's retreat. Setting forth towards the distant sight of the stricken ship, you encounter a formidable challenge—an impassable, fast-flowing river lies ahead. Do you choose to scout upstream for a safer crossing point? Alternatively, will you venture downstream in pursuit of a more navigable section? <br><br>UPSTREAM / DOWNSTREAM",
-                    ["image"] = "",
+                    ["image"] = "images/shelterScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["upstream"] = "upStreamScene",
@@ -218,7 +218,7 @@ namespace GameStoreApi.Controllers
                 ["upStreamScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Advancing upstream, after a brief journey, you come upon a narrowing in the river, yet the current remains robust. Do you wish to persist in seeking an alternative crossing further upstream or attempt to navigate the current? <br><br>CONTINUE / CROSS",
-                    ["image"] = "",
+                    ["image"] = "images/upStreamScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["continue"] = "continueUpRiverScene",
@@ -228,7 +228,7 @@ namespace GameStoreApi.Controllers
                 ["continueUpRiverScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Continuing your exploration upstream, you discover a fallen dead tree spanning the river—a precarious but safe passage across. However, your progress leads you to confront a towering cliff. Will you endeavor to ascend the cliff's face or seek an alternative path around it? <br><br>CLIMB / GO AROUND",
-                    ["image"] = "",
+                    ["image"] = "continueUpRiverScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["climb"] = "climbCliffScene",
@@ -238,7 +238,7 @@ namespace GameStoreApi.Controllers
                 ["climbCliffScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Scaling the cliff's face with determination, you conquer the ascent and arrive safely at its summit. From this elevated viewpoint, you discern the distant silhouette of the DR's ship nestled at the base of the frozen hill. The descent ahead appears perilously steep, while a few hundred feet away, a rocky terrain promises a potentially easier route. Amidst this decision-making moment, your gaze catches sight of a mysterious creature stealthily approaching the vicinity of the ship. Despite this unforeseen development, will you brave the daunting descent or opt for the seemingly more traversable but timely rocky terrain route? <br><br>DESCEND / ROCKS",
-                    ["image"] = "",
+                    ["image"] = "images/climbCliffScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["descend"] = "winScene1",
@@ -258,7 +258,7 @@ namespace GameStoreApi.Controllers
                 ["downStreamScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "As you journey downstream, the river gradually expands, widening its expanse. Faced with this change, do you contemplate attempting to cross the now broader river or consider constructing a raft for safer passage? <br><br>CROSS / RAFT",
-                    ["image"] = "",
+                    ["image"] = "downStreamScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["cross"] = "riverDeathScene",
@@ -268,7 +268,7 @@ namespace GameStoreApi.Controllers
                 ["raftScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "As you skillfully fashion a sturdy raft and commence your crossing, the river's current proves far stronger than anticipated, swiftly propelling you downstream. Halfway across, confronted with this unexpected challenge, do you choose to remain on the raft, endeavoring to navigate to the opposite shore? Or do you opt to leap into the water, attempting to swim the remaining distance to safety? <br><br>STAY / JUMP",
-                    ["image"] = "",
+                    ["image"] = "images/raftScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["stay"] = "raftDeathScene",
@@ -278,7 +278,7 @@ namespace GameStoreApi.Controllers
                 ["riverSwimScene"] = new Dictionary<string, object>
                 {
                     ["text"] = "Plunging into the icy waters, you encounter a current fiercer than anticipated. Despite the challenge, your determination prevails as you seize hold of a sturdy vine, using it to pull yourself to the safety of the shore. However, the biting cold leaves you shivering uncontrollably. Your attention is drawn to a sight—a mysterious creature stealthily approaching the vicinity of the ship. Despite this unexpected encounter, do you prioritize warming yourself by stripping and drying your soaked clothes, or do you endure the biting cold and press on toward the ship, despite the creature's presence? <br><br>DRY OFF / PUSH ON",
-                    ["image"] = "",
+                    ["image"] = "riverSwimScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["dry off"] = "outOfTimeScene1",
@@ -308,7 +308,7 @@ namespace GameStoreApi.Controllers
                 ["outOfTimeScene1"] = new Dictionary<string, object>
                 {
                     ["text"] = "Having stripped down and dried your clothes by a crackling fire, you set out toward the ship with renewed determination. However, upon arrival, a distressing sight meets your eyes, the creature ravaging on the remains of the doctor. Your delay has led to this grim outcome. Time has proven to be your adversary. Game Over. Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "images/death.jpg",
+                    ["image"] = "outOfTimeScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
@@ -318,7 +318,7 @@ namespace GameStoreApi.Controllers
                 ["outOfTimeScene2"] = new Dictionary<string, object>
                 {
                     ["text"] = "Navigating towards the rocks, you descend the hillside safely, skillfully maneuvering down the steep terrain. However, upon reaching the ship at the bottom, a haunting scene unfolds before you, the creature engorging itself on the doctor's remains. Regrettably, your delay has led to this grim outcome. Time has proven to be your adversary once again. Game Over. Would you like to play again? <br><br>YES / NO",
-                    ["image"] = "images/death.jpg",
+                    ["image"] = "outOfTimeScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["yes"] = "start",
@@ -328,7 +328,7 @@ namespace GameStoreApi.Controllers
                 ["winScene1"] = new Dictionary<string, object>
                 {
                     ["text"] = "You descend the icy gradient but slip and plummet to the bottom, luckily you come to rest in a mound of soft snow. You reach the ship where you find the Dr but!!!",
-                    ["image"] = "",
+                    ["image"] = "images/winScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["option1"] = "",
@@ -338,7 +338,7 @@ namespace GameStoreApi.Controllers
                 ["winScene2"] = new Dictionary<string, object>
                 {
                     ["text"] = "You push on and reach the ship where you find the Dr but!!!",
-                    ["image"] = "",
+                    ["image"] = "images/winScene.jpg",
                     ["options"] = new Dictionary<string, string>
                     {
                         ["option1"] = "",

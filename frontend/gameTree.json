@@ -14,88 +14,58 @@
   "caveScene2": {
     "image": "images/caveScene2.jpg"
   },
-  "fallDeath": {
-    "image": "images/fallDeath.jpg"
-  },
-  "ledgeDeath": {
-    "image": ""
-  },
   "caveExitScene1": {
     "image": "images/caveExit.jpg"
   },
   "caveExitScene2": {
     "image": "images/caveExit.jpg"
   },
-  "fireDeathScene1": {
-    "image": ""
-  },
-  "fireDeathScene2": {
-    "image": ""
-  },
   "frozenForrestEntrance": {
-    "image": ""
+    "image": "images/frozenForrestEntrance.jpg"
   },
   "frozenForrestScene": {
-    "image": ""
+    "image": "images/frozenForrestScene.jpg"
   },
   "torchScene": {
-    "image": ""
+    "image": "images/torchScene.jpg"
   },
   "searchScene": {
-    "image": ""
+    "image": "images/searchScene.jpg"
   },
   "delayScene": {
-    "image": ""
-  },
-  "cliffDeathScene": {
-    "image": ""
-  },
-  "crevasseScene": {
-    "image": ""
+    "image": "images/delayScene.jpg"
   },
   "lakeScene": {
-    "image": ""
+    "image": "images/lakeScene.jpg"
   },
   "shelterScene": {
-    "image": ""
+    "image": "images/shelterScene.jpg"
   },
   "upStreamScene": {
-    "image": ""
+    "image": "images/upStreamScene.jpg"
   },
   "continueUpRiverScene": {
-    "image": ""
+    "image": "images/continueUpRiverScene.jpg"
   },
   "climbCliffScene": {
-    "image": ""
-  },
-  "creatureDeathScene": {
-    "image": ""
+    "image": "images/climbCliffScene.jpg"
   },
   "downStreamScene": {
-    "image": ""
+    "image": "images/downStreamScene.jpg"
   },
   "raftScene": {
-    "image": ""
+    "image": "images/raftScene.jpg"
   },
   "riverSwimScene": {
-    "image": ""
-  },
-  "raftDeathScene": {
-    "image": ""
-  },
-  "riverDeathScene": {
-    "image": ""
+    "image": "images/riverSwimScene.jpg"
   },
   "outOfTimeScene1": {
-    "image": ""
-  },
-  "outOfTimeScene2": {
-    "image": ""
+    "image": "images/outOfTimeScene.jpg"
   },
   "winScene1": {
-    "image": ""
+    "image": "images/winScene.jpg"
   },
-  "winScene2": {
-    "image": ""
+  "riverDeathScene": {
+    "image": "images/death.jpg"
   }
 }
